@@ -3,5 +3,10 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  // TODO
+  let selection = document.getElementById("horn-select"); 
+  
+  selection.addEventListener("change", () => { });
+
+  oninput = (event) => { }
+
 }
