@@ -1,8 +1,9 @@
 // expose.js
-
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
+  const jsConfetti = new JSConfetti()
+
   //volume section 
   const volumeLevel = document.getElementById("volume");
   const volumeImg = document.querySelector('#volume-controls img');
@@ -35,7 +36,7 @@ function init() {
   const hornAudio = document.querySelector("audio"); 
   
   hornSelect.addEventListener('change', () => {
-    const selectedValue = hornSelect.value; 
+    var selectedValue = hornSelect.value; 
 
     if (selectedValue == 'air-horn') {
       hornAudio.src = 'assets/audio/air-horn.mp3';
@@ -55,7 +56,13 @@ function init() {
   const play = document.querySelector('button');
   const sound = document.querySelector('audio');
   
-  play.addEventListener('click', playAudio);
+  play.addEventListener('click', () => {
+    playAudio(); 
+
+    if (hornSelect.value === 'party-horn') {
+      jsConfetti.addConfetti();
+    }
+  });
 
   function playAudio(){
     sound.play();
