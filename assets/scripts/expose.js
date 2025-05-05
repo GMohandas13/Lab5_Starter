@@ -51,6 +51,16 @@ function init() {
     }
   })
 
+  //Play Button Functionality
+  const play = document.querySelector('button');
+  const sound = document.querySelector('audio');
+  
+  play.addEventListener('click', playAudio);
+
+  function playAudio(){
+    sound.play();
+  }
+
   /*
   hornImage.src = f""; /*this should be the variable for the selected form*//*
   document.images[0]; 
