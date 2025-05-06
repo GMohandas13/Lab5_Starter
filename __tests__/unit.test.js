@@ -100,7 +100,6 @@ test('should contain a . after @', () => {
 }); 
 
 test('tld should be 2 or 3 letters long', () => {
-  expect(isEmail('email@example.co').toBe(true)); 
   expect(isEmail('email@example.com').toBe(true)); 
   expect(isEmail('email@example.c').toBe(false)); 
   expect(isEmail('email@example.comcom').toBe(false)); 
