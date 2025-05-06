@@ -10,4 +10,10 @@ This is not a small-scale test, and changing other parts of the application coul
 
 2) Would you use a unit test to test the “max message length” feature of a messaging application? Why or why not? For this question, assume the “max message length” feature prevents the user from typing more than 80 characters.
 
-Answer: This is more acceptable. The unit test for such a feature would be far simpler, and wouldn't be affected by changes in other parts of the application. A test like this fits the definition of a unit test far better than in the first question. 
+Answer: This is more acceptable. The unit test for such a feature would be far simpler, and wouldn't be affected by changes in other parts of the application. A test like this fits the definition of a unit test far better than in the first question as it isolates one specific factor/aspect of the function being tested.
+
+
+Link to Expose: https://gmohandas13.github.io/Lab5_Starter/expose.html
+
+
+Link to Explore: https://gmohandas13.github.io/Lab5_Starter/explore.html
