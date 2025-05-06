@@ -29,3 +29,28 @@ test('phone number should not support other lengths', () => {
   expect(isPhoneNumber('123').toBe(false))
   expect(isPhoneNumber('12345678900987654321').toBe(false));
 }); 
+
+
+//tests for isEmail
+test('should not start with punctuation', () => {
+  expect(isEmail('_email@example.com').toBe(false));
+  expect(isEmail('.email@example.com').toBe(false)); 
+}); 
+
+test('should contain @ symbol', () => {
+  expect(isEmail('email@example.com').toBe(true)); 
+  expect(isEmail('email at example.com').toBe(false)); 
+});
+
+test('should contain a . after @', () => {
+  expect(isEmail('email@example').toBe(false)); 
+  expect(isEmail('email@example..com').toBe(false)); 
+  expect(isEmail('email@example.com').toBe(true)); 
+}); 
+
+test('tld should be 2 or 3 letters long', () => {
+  expect(isEmail('email@example.co').toBe(true)); 
+  expect(isEmail('email@example.com').toBe(true)); 
+  expect(isEmail('email@example.c').toBe(false)); 
+  expect(isEmail('email@example.comcom').toBe(false)); 
+});
